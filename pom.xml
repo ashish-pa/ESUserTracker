@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ESClient</groupId>
+  <artifactId>ESClient</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>ESClient</name>
+    
+  <repositories>
+      <!-- add the elasticsearch repo -->
+      <repository>
+         <id>elasticsearch-releases</id>
+         <url>https://maven.elasticsearch.org/releases</url>
+         <releases>
+            <enabled>true</enabled>
+         </releases>
+         <snapshots>
+            <enabled>false</enabled>
+         </snapshots>
+      </repository>
+  </repositories>
+   
+  <dependencies>
+  	<dependency>
+  		<groupId>org.elasticsearch</groupId>
+  		<artifactId>elasticsearch</artifactId>
+  		<version>2.1.1</version>
+  	</dependency>
+	<dependency>
+	    <groupId>org.elasticsearch.plugin</groupId>
+	    <artifactId>shield</artifactId>
+	    <version>2.2.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+	<dependency>
+	    <groupId>org.codehaus.jackson</groupId>
+	    <artifactId>jackson-core-asl</artifactId>
+	    <version>1.9.13</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.0.0</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
